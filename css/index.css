@@ -3,7 +3,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 66% 34%;
     grid-template-areas:
         "main-menu main-menu main-menu main-content main-content"
         "main-about-us main-about-us main-about-us main-about-us main-about-us";
@@ -102,9 +102,6 @@
 
 .content__item__description {
     margin-top: 1.5em;
-    font-size: 1em;
-    line-height: 1.6em;
-    color: var(--dark-gray);
 }
 
 .main__content__shop-now {
@@ -149,5 +146,36 @@
 }
 
 .main__about-us {
+    display: flex;
+    align-items: center;
     grid-area: main-about-us;
+}
+
+
+.about-us__image {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main__about-us__content {
+    width: 40%;
+    padding: 0 4em;
+}
+
+.about-us__content__title {
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+}
+
+.about-us__content__description {
+    margin-top: 1em;
+}
+
+.description__home-page {
+    font-size: 1em;
+    line-height: 1.5em;
+    color: var(--dark-gray);
 }
