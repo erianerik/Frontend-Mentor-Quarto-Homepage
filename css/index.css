@@ -1,0 +1,22 @@
+.main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 65% 35%;
+    grid-template-areas:
+        "main-menu main-menu main-menu main-content main-content"
+        "main-about-us main-about-us main-about-us main-about-us main-about-us";
+}
+
+.main__menu {
+    grid-area: main-menu;
+}
+
+.main__content {
+    grid-area: main-content;
+}
+
+.main__about-us {
+    grid-area: main-about-us;
+}
