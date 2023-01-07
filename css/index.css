@@ -3,7 +3,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 65% 35%;
+    grid-template-rows: 70% 30%;
     grid-template-areas:
         "main-menu main-menu main-menu main-content main-content"
         "main-about-us main-about-us main-about-us main-about-us main-about-us";
@@ -70,11 +70,82 @@
     left: 0;
     top: 0;
     z-index: -1;
-    
+
 }
 
 .main__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: main-content;
+    position: relative;
+}
+
+.main__content__item {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.content__item__title {
+    font-size: 3.3em;
+    font-weight: 600;
+    letter-spacing: -3px;
+    overflow-wrap: break-word;
+    color: var(--black);
+}
+
+.content__item__description {
+    margin-top: 1.5em;
+    font-size: 1em;
+    line-height: 1.6em;
+    color: var(--dark-gray);
+}
+
+.main__content__shop-now {
+    margin-top: 1.3em;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .8em;
+    color: var(--black);
+}
+
+.main__content__shop-now:hover {
+    color: var(--dark-gray);
+    transition: color .2s ease;
+}
+
+.main__content__shop-now:hover>.main__content__shop-now__icon {
+    filter: opacity(0.5);
+    transition: filter .2s ease;
+}
+
+.main__content__slider {
+    width: 10em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.slider__action {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.slider__action:hover {
+    background-color: var(--very-dark-gray);
 }
 
 .main__about-us {
