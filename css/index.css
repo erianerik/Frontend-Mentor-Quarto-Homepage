@@ -2,8 +2,8 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 66% 34%;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 68% minmax(auto, 32%);
     grid-template-areas:
         "main-menu main-menu main-menu main-content main-content"
         "main-about-us main-about-us main-about-us main-about-us main-about-us";
@@ -76,15 +76,14 @@
 .main__content {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 6.3em;
     grid-area: main-content;
     position: relative;
 }
 
 .main__content__item {
-    width: 70%;
+    width: 66%;
+    min-width: 23em;
     height: auto;
     margin: 0 auto;
     display: flex;
@@ -93,7 +92,7 @@
 }
 
 .content__item__title {
-    font-size: 3.3em;
+    font-size: 3.1em;
     font-weight: 600;
     letter-spacing: -3px;
     overflow-wrap: break-word;
@@ -160,17 +159,25 @@
 
 .main__about-us__content {
     width: 40%;
-    padding: 0 4em;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
 
-.about-us__content__title {
+.about-us__content__container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1.3em;
+}
+
+.content__container__title {
     font-size: 1em;
     font-weight: 700;
     letter-spacing: .5em;
     text-transform: uppercase;
 }
 
-.about-us__content__description {
+.content__container__description {
     margin-top: 1em;
 }
 
