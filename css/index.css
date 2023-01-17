@@ -60,6 +60,10 @@
     animation: .5s nav-item-growth-width-animation alternate;
 }
 
+.header__nav__menu-mobile,
+.header__nav__close-menu {
+    display: none;
+}
 
 .main__menu__background-image {
     display: block;
@@ -216,8 +220,54 @@
             "main-about-us";
     }
 
-    .header__nav__menu-list {
-        display: none;
+    .header__nav__menu-mobile,
+    .header__nav__close-menu {
+        display: initial;
+    }
+
+    .menu__header__nav {
+        gap: 0;
+    }
+
+    .main__menu__header {
+        padding: 2.5em 2em;
+    }
+
+
+    .header__nav__image-logo {
+        display: inline-block;
+        width: 20%;
+    }
+
+    .logon-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .header__nav__menu {
+        width: 100%;
+        height: 6em;
+        padding: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: -9999px;
+        left: 0;
+        background-color: var(--white);
+    }
+    
+    .header__nav__menu--open {
+        transition: all .5s ease-in-out;
+        animation: slide-top-down .5s alternate-reverse;
+        top: 0px;
+    }
+
+
+    .nav__menu-list__item {
+        color: var(--black);
     }
 
     .main__about-us {
@@ -283,5 +333,15 @@
     .content__container__title {
         font-size: .9em;
         letter-spacing: .3em;
+    }
+}
+
+@keyframes slide-top-down {
+    to {
+        top: -100px;
+    }
+
+    from {
+        top: 0px;
     }
 }
