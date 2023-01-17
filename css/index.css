@@ -1,0 +1,347 @@
+.main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 68% minmax(auto, 32%);
+    grid-template-areas:
+        "main-menu main-menu main-menu main-content main-content"
+        "main-about-us main-about-us main-about-us main-about-us main-about-us";
+}
+
+.main__menu {
+    width: 100%;
+    height: 100%;
+    grid-area: main-menu;
+    position: relative;
+}
+
+.main__menu__header {
+    width: 100%;
+    padding: 2.5em 3em;
+}
+
+.menu__header__nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0 4em;
+}
+
+.header__nav__menu-list {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 0 2em;
+}
+
+.nav__menu-list__item {
+    display: inline-block;
+    height: 3em;
+    line-height: 3em;
+    font-size: 1em;
+    text-transform: lowercase;
+    color: var(--white);
+    cursor: pointer;
+    position: relative;
+}
+
+.nav__menu-list__item:hover::after {
+    display: block;
+    content: '';
+    width: 1.25em;
+    height: 0.18em;
+    margin: 0 auto;
+    background-color: var(--white);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: .5s nav-item-growth-width-animation alternate;
+}
+
+.header__nav__menu-mobile,
+.header__nav__close-menu {
+    display: none;
+}
+
+.main__menu__background-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+.main__content {
+    width: 100%;
+    height: 100%;
+    padding-top: 6.3em;
+    grid-area: main-content;
+    position: relative;
+}
+
+.main__content__item {
+    width: 66%;
+    min-width: 23em;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.content__item__title {
+    font-size: 3.1em;
+    font-weight: 600;
+    letter-spacing: -3px;
+    overflow-wrap: break-word;
+    color: var(--black);
+}
+
+.content__item__description {
+    margin-top: 1.5em;
+}
+
+.main__content__shop-now {
+    margin-top: 1.3em;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .8em;
+    color: var(--black);
+}
+
+.main__content__shop-now:hover {
+    color: var(--dark-gray);
+    transition: color .2s ease;
+}
+
+.main__content__shop-now:hover>.main__content__shop-now__icon {
+    filter: opacity(0.5);
+    transition: filter .2s ease;
+}
+
+.main__content__slider {
+    width: 10em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.slider__action {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.slider__action:hover {
+    background-color: var(--very-dark-gray);
+}
+
+.main__about-us {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-area: main-about-us;
+}
+
+
+.about-us__image {
+    width: 30%;
+    min-width: 20em;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main__about-us__second-image {
+    flex-grow: 2;
+}
+
+.main__about-us__content {
+    width: 40%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
+}
+
+.about-us__content__container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1.3em;
+}
+
+.content__container__title {
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+}
+
+.content__container__description {
+    margin-top: 1em;
+}
+
+.description__home-page {
+    font-size: 1em;
+    line-height: 1.5em;
+    color: var(--dark-gray);
+}
+
+@media (max-width: 1015px) {
+    .main {
+        grid-template-columns: repeat(4, 25%);
+        grid-template-areas:
+            "main-menu main-menu main-content main-content"
+            "main-about-us main-about-us main-about-us main-about-us";
+    }
+
+}
+
+@media (max-width: 885px) {
+    .main {
+        grid-template-columns: 100%;
+        grid-template-rows: 45% 55% 100%;
+        grid-template-areas:
+            "main-menu"
+            "main-content"
+            "main-about-us";
+    }
+
+    .header__nav__menu-mobile,
+    .header__nav__close-menu {
+        display: initial;
+    }
+
+    .menu__header__nav {
+        gap: 0;
+    }
+
+    .main__menu__header {
+        padding: 2.5em 2em;
+    }
+
+
+    .header__nav__image-logo {
+        display: inline-block;
+        width: 20%;
+    }
+
+    .logon-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .header__nav__menu {
+        width: 100%;
+        height: 6em;
+        padding: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: -9999px;
+        left: 0;
+        background-color: var(--white);
+    }
+    
+    .header__nav__menu--open {
+        transition: all .5s ease-in-out;
+        animation: slide-top-down .5s alternate-reverse;
+        top: 0px;
+    }
+
+
+    .nav__menu-list__item {
+        color: var(--black);
+    }
+
+    .main__about-us {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .main__about-us__content {
+        width: 100%;
+    }
+
+    .main__content {
+        padding: 0 2em;
+        display: grid;
+        place-items: center;
+    }
+
+    .main__content__item {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .main__content__slider {
+        width: 5em;
+        height: 2em;
+        bottom: 100%;
+        left: calc(100% - 5em);
+    }
+
+    .slider__next__image {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .content__item__title {
+        font-size: 2.5em;
+    }
+
+    .about-us__image {
+        width: 100%;
+        height: 100%;
+        min-width: auto;
+    }
+
+    .main__content__shop-now {
+        font-size: .95em;
+        margin-top: 2.3em;
+    }
+
+    .main__content__shop-now__icon {
+        width: 15%;
+    }
+
+    .description__home-page {
+        font-size: .95em;
+    }
+
+    .about-us__content__container {
+        width: 100%;
+        padding: 3em 2em;
+    }
+
+    .content__container__title {
+        font-size: .9em;
+        letter-spacing: .3em;
+    }
+}
+
+@keyframes slide-top-down {
+    to {
+        top: -100px;
+    }
+
+    from {
+        top: 0px;
+    }
+}

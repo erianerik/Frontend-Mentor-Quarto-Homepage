@@ -1,51 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/base.css" >
-  <link rel="stylesheet" href="./css/index.css" >
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/animations.css">
 
   <title>Frontend Mentor | Room homepage</title>
 
 </head>
+
 <body>
-  Home
-  Shop
-  About
-  Contact
+  <main class="main">
+    <section class="main__menu">
+      <header class="main__menu__header">
+        <nav class="menu__header__nav">
+          <img src="./images/icon-hamburger.svg" alt="" class="header__nav__menu-mobile">
+          
+          <div class="logon-container">
+            <img src="./images/logo.svg" alt="Room" class="header__nav__image-logo">
+          </div>
+          
+          <div class="header__nav__menu">
+            <figure class="header__nav__close-menu">
+              <img src="./images/icon-close.svg" alt="" class="header__nav__menu-mobile">
+            </figure>
+            
+            <ul class="header__nav__menu-list">
+            
+              <li class="nav__menu-list__item">Home</li>
+              <li class="nav__menu-list__item">Shop</li>
+              <li class="nav__menu-list__item">About</li>
+              <li class="nav__menu-list__item">Contact</li>
+            </ul>
+          </div>
+        </nav>
+        
+      </header>
 
-  Discover innovative ways to decorate
+      <picture>
+        <source srcset="./images/mobile-image-hero-1.jpg" media="(max-width: 550px)">
+        <img src="./images/desktop-image-hero-1.jpg" alt="Table for two people white" class="main__menu__background-image" />
+      </picture>
+    </section>
 
-  We provide unmatched quality, comfort, and style for property owners across the country. 
-  Our experts combine form and function in bringing your vision to life. Create a room in your 
-  own style with our collection and make your property a reflection of you and what you love.
+    <section class="main__content">
+      <div class="main__content__item">
+        <h2 class="content__item__title"> Discover innovative ways to decorate</h2>
+        <p class="description__home-page content__item__description">We provide unmatched quality, comfort, and style for property owners
+          across
+          the country.
+          Our experts combine form and function in bringing your vision to life. Create a room in your
+          own style with our collection and make your property a reflection of you and what you love.
+        </p>
 
-  Shop now
+        <!-- 
+      # To Do | Inserir texto do slider dinamicamente pelo javascript
+     
+      We are available all across the globe
 
-  We are available all across the globe
+      With stores all over the world, it's easy for you to find furniture for your home or place of business.
+      Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+      store locator. Any questions? Don't hesitate to contact us today.
 
-  With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-  Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-  store locator. Any questions? Don't hesitate to contact us today.
 
-  Shop now
+      Manufactured with the best materials
 
-  Manufactured with the best materials
+      Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
+      to ensure that every product is made as perfect and as consistent as possible. With three decades of
+      experience in this industry, we understand what customers want for their home and office. 
+      -->
 
-  Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-  to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-  experience in this industry, we understand what customers want for their home and office.
+        <a href="#" class="main__content__shop-now">Shop now <img src="./images/icon-arrow.svg" alt="icon arrow"  class="main__content__shop-now__icon"></a>
+        <div class="main__content__slider">
+          <a href="" class="content__slider__next slider__action"> <img src="./images/icon-angle-left.svg" alt="Previus image" class="slider__next__image" /> </a>
+          <a href="" class="content__slider__previous slider__action"> <img src="./images/icon-angle-right.svg" alt="Next image" class="slider__next__image" /> </a>
+        </div>
+      </div>
+    </section>
 
-  Shop now
 
-  About our furniture
+    <section class="main__about-us">
+      <img src="./images/image-about-dark.jpg" alt="two black chairs with a table in the middle" class="main__about-us__primary-image about-us__image">
 
-  Our multifunctional collection blends design and function to suit your individual taste.
-  Make each room unique, or pick a cohesive theme that best express your interests and what
-  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.
+      <div class="main__about-us__content">
+        <div class="about-us__content__container">
+          <h3 class="content__container__title">About our furniture</h3>
+          <p class="description__home-page content__container__description">
+            Our multifunctional collection blends design and function to suit your individual taste.
+            Make each room unique, or pick a cohesive theme that best express your interests and what
+            inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+            or anything in between. Product specialists are available to help you create your dream space.
+          </p>
+        </div>
+      </div>
+
+      <img src="./images/image-about-light.jpg" alt="White chair" class="main__about-us__second-image about-us__image">
+    </section>
+  </main>
+  
 </body>
 </html>
