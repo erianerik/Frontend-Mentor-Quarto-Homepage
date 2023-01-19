@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const sliderElement = {
-        title: $(".content__item__title"),
-        description: $(".content__item__description"),
+        title: $(".item__content__title"),
+        description: $(".item__content__description"),
         image: $(".main__menu__background-image"),
         source: $(".image-source"),
     };
